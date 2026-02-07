@@ -1,33 +1,11 @@
-# Advanced Bilingual Voice Assistant (Optimized)
+# Advanced Bilingual Voice Assistant
 ## پیشرفتہ دو لسانی وائس اسسٹنٹ
 
-**Version:** 2.1.0-optimized  
-**Optimized for:** All features + Future enhancements
+A bilingual (English + Urdu) voice assistant with wake-word support, GUI/terminal modes, and hands-free system control. It provides speech recognition, context-aware commands, and text-to-speech with automatic fallback between online and offline engines.
 
 ---
 
-## 🎯 What Changed in This Version?
-
-### ✅ Removed (Duplicate/Unnecessary):
-- ❌ `gui_phase1.py` - Duplicate of gui_standalone.py
-- ❌ `config_validator.py` - Overly complex, merged into main files
-- ❌ `setup_bilingual.sh` - Duplicate setup script
-- ❌ Documentation files (.md) - Moved info to this README
-
-### ✅ Optimized Files:
-- 📝 `constants.py` - Removed ~40% unused constants
-- 📝 `error_handling.py` - Kept only essential functions (~60% reduction)
-- 📝 `utils.py` - Streamlined, removed duplicates (~30% reduction)
-
-### ✅ Kept As-Is (Already Optimized):
-- ✅ All core functionality files
-- ✅ Feature modules (browser, context, multimedia, system)
-- ✅ GUI and launcher scripts
-- ✅ Config file
-
----
-
-## 📁 Final File Structure
+## 📁 Project Structure
 
 ```
 voice_assistant/
@@ -52,11 +30,6 @@ voice_assistant/
 └── Setup:
     └── setup.sh                   # Installation script
 ```
-
-**Total:** 14 files (down from 20+)
-**Code reduction:** ~35% overall
-
----
 
 ## ✨ All Features (Fully Working)
 
@@ -99,8 +72,6 @@ voice_assistant/
 - ⚙️ Settings
 - 🎨 Custom app support
 
----
-
 ## 📦 Installation
 
 ### Quick Setup:
@@ -132,8 +103,6 @@ wget https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/en/en_US/lessac/
 wget https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/en/en_US/lessac/medium/en_US-lessac-medium.onnx.json
 ```
 
----
-
 ## 🚀 Usage
 
 ### With GUI (Recommended):
@@ -149,8 +118,6 @@ python3 voice_assistant_advanced.py
 ```bash
 python3 voice_assistant_advanced.py --no-gui
 ```
-
----
 
 ## 🎯 Example Commands
 
@@ -183,8 +150,6 @@ Alexa: "Opening chrome"
 You: "Alexa, close it"
 Alexa: "Closed chrome"
 ```
-
----
 
 ## ⚙️ Configuration
 
@@ -222,29 +187,7 @@ text_editor = gedit
 music_player = rhythmbox
 ```
 
----
-
-## 🎨 GUI Enhancement (For Future)
-
-The current GUI (`gui_standalone.py`) has:
-- ✅ Animated waveform visualizer
-- ✅ Real-time status updates
-- ✅ Conversation transcript
-- ✅ Smooth animations
-
-**Ideas for enhancement:**
-1. Add themes (dark/light/custom colors)
-2. Settings panel in GUI
-3. Voice feedback visualization (bars/spectrum)
-4. Mini mode (compact version)
-5. System tray integration
-6. Keyboard shortcuts
-7. Command history viewer
-8. Visual feedback for each command type
-
----
-
-## 🔧 Code Organization (For Future Development)
+## 🔧 Code Organization
 
 ### Adding New Commands:
 
@@ -272,59 +215,6 @@ APP_COMMANDS = {
     # ...existing apps
 }
 ```
-
----
-
-## 🐛 Troubleshooting
-
-### Microphone Issues:
-```bash
-# Test microphone
-arecord -l
-arecord -d 5 test.wav && aplay test.wav
-```
-
-### GUI Not Showing:
-```bash
-# Use terminal mode for debugging
-python3 voice_assistant_advanced.py --no-gui
-```
-
-### TTS Not Working:
-```bash
-# Check gTTS (needs internet)
-echo "test" | gtts-cli - | mpg123 -
-
-# Check Piper (offline)
-echo "test" | piper --model ~/.local/share/piper/voices/en_US-lessac-medium.onnx --output_file test.wav
-aplay test.wav
-```
-
-### Import Errors:
-```bash
-# Reinstall dependencies
-pip install --force-reinstall gtts SpeechRecognition pyaudio langdetect psutil --break-system-packages
-```
-
----
-
-## 📊 Performance Metrics
-
-**Before optimization:**
-- 20+ files
-- ~5000 lines total
-- Many unused constants
-- Duplicate code
-
-**After optimization:**
-- 14 files
-- ~3500 lines total
-- All code is used
-- No duplicates
-
-**Reduction:** ~35% code reduction while keeping ALL features!
-
----
 
 ## 🎓 Technical Details
 
@@ -354,45 +244,6 @@ Audio Output
 - **TTS Cache:** 7 days (configurable)
 - **Internet Check:** 30 seconds cache
 - **Tab Detection:** Real-time (no cache)
-
----
-
-## 📝 Logs
-
-```bash
-# View logs
-tail -f ~/.local/share/voice_assistant/assistant.log
-
-# Clear old logs
-rm ~/.local/share/voice_assistant/assistant.log
-```
-
----
-
-## 🚀 Future Enhancement Roadmap
-
-### Short-term (Easy):
-- [ ] Add more Chrome profiles
-- [ ] Custom wake words
-- [ ] More Urdu commands
-- [ ] GUI themes
-- [ ] Keyboard shortcuts
-
-### Medium-term:
-- [ ] Email integration (Gmail)
-- [ ] Calendar integration
-- [ ] Reminders/Timers
-- [ ] Smart home control
-- [ ] File operations (search, open, move)
-
-### Long-term (Advanced):
-- [ ] Custom wake word training (Porcupine)
-- [ ] Local LLM integration
-- [ ] Multi-room support
-- [ ] Mobile app companion
-- [ ] Plugin system
-
----
 
 ## 📄 License
 

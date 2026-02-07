@@ -37,6 +37,7 @@ sudo apt install wmctrl
 ```
 
 ### Step 3: Update `voice_assistant_advanced.py`
+
 Add these imports at the top (around line 28):
 ```python
 from workflow_manager import WorkflowManager, WorkflowState
