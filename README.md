@@ -3,6 +3,7 @@
 
 **Version:** 2.1.0-optimized  
 **Optimized for:** All features + Future enhancements
+<br>
 **Developer Name:** Muhammad Amaan
 
 ## Extra Info
