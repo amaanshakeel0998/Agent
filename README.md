@@ -251,14 +251,5 @@ Personal project - Free to use and modify!
 
 ---
 
-## 🙏 Credits
-
-- **gTTS** - Google Text-to-Speech
-- **Piper** - Offline TTS by Rhasspy
-- **SpeechRecognition** - Python library
-- **Anthropic Claude** - Development assistance
-
----
-
 **Enjoy your optimized voice assistant! 🎉**  
 **اپنے بہتر شدہ وائس اسسٹنٹ سے لطف اٹھائیں! 🎉**
