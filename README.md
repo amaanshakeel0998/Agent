@@ -7,35 +7,44 @@
 **Developer Name:** Muhammad Amaan
 
 ## Extra Info
-The current owner name saved in this project is "Amaan", when you ask the name of the owner it said "Amaan", So for this you can edit it first.
+The current owner name saved in this project is "Amaan", when you ask the name of the owner it said "Amaan", So for better experience you can edit it first.
 
-## 📁 Final File Structure
+## 📁 Project Structure
 
 ```
 voice_assistant/
-├── voice_assistant_advanced.py    # Main application (1202 lines)
+├── README.md
+├── requirements.txt
+├── config.ini                     # User configuration
+├── voice_assistant_advanced.py    # Main application
 ├── start_assistant.py             # Launcher (stable GUI mode)
 ├── gui_standalone.py              # GUI interface
-├── config.ini                     # User configuration
-│
-├── Core Modules:
+├── run_terminal.py                # Terminal mode helper
+├── constants.py                   # Constants
+├── voice_utils.py                 # Utilities
 ├── speech_recognition_module.py   # Speech recognition + wake word
 ├── tts_engine.py                  # Text-to-speech (gTTS + Piper)
-├── voice_utils.py                 # Utilities (optimized)
-├── constants.py                   # Constants (optimized)
-├── error_handling.py              # Error handling (optimized)
-│
-├── Feature Modules:
+├── error_handling.py              # Error handling
 ├── context_manager.py             # App tracking & memory
 ├── browser_tab_manager.py         # Browser tab control
 ├── system_actions.py              # System controls (brightness, WiFi, etc.)
 ├── multimedia_actions.py          # Media & volume controls
-│
-└── Setup:
+├── desktop_app_detector.py        # App detection helpers
+├── workflow_manager.py            # Workflow execution
+├── docs/                          # Documentation
+│   ├── BEFORE_AFTER_COMPARISON.md
+│   ├── CODE_INTEGRATION_SNIPPETS.md
+│   ├── OPTIMIZATION_SUMMARY.md
+│   ├── QUICK_FIX_GUIDE.md
+│   ├── QUICK_START.md
+│   ├── READY_TO_USE.md
+│   └── WORKFLOW_INTEGRATION_GUIDE.md
+├── tests/                         # Tests
+│   ├── test_imports.py
+│   └── test_new_features.py
+└── setup/
     └── setup.sh                   # Installation script
 ```
-
-**Total:** 14 files (down from 20+)
 
 ---
 
